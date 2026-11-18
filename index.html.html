@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Polemoni Mahesh | Finance MBA | SAP FICO</title>
+<meta name="description" content="Portfolio of Polemoni Mahesh, MBA (Finance) student and B.Com graduate from Hyderabad, learning SAP FICO.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f1f4f0; --surface:#e6ece6; --ink:#16241d; --muted:#4d5e54;
+  --rule:#a9b8ae; --pen:#2347c5; --margin:#b3362b;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --sans:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f1a14; --surface:#16251c; --ink:#e4ece6; --muted:#9fb1a5;
+    --rule:#33473b; --pen:#8aa4ff; --margin:#ff8b7d;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1a14; --surface:#16251c; --ink:#e4ece6; --muted:#9fb1a5;
+  --rule:#33473b; --pen:#8aa4ff; --margin:#ff8b7d; color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65}
+a{color:var(--pen)}
+:focus-visible{outline:3px solid var(--pen);outline-offset:3px;border-radius:2px}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+
+/* nav */
+header.nav{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--rule);z-index:5}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:56px}
+.nav .brand{font-family:var(--serif);font-weight:600;font-size:20px;text-decoration:none;color:var(--ink)}
+.nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;overflow-x:auto}
+.nav a.link{color:var(--muted);text-decoration:none;font-size:15px;font-weight:500;white-space:nowrap}
+.nav a.link:hover{color:var(--ink)}
+
+/* hero: the T-account */
+.hero{padding:72px 0 56px}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(40px,7vw,76px);line-height:1.05;letter-spacing:-.02em;margin:0 0 12px}
+.hero p.lead{font-size:20px;max-width:56ch;color:var(--muted);margin:0 0 40px}
+.taccount{display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--ink);position:relative;background:var(--surface)}
+.taccount::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;background:var(--ink)}
+.taccount h2{font-family:var(--serif);font-size:22px;font-weight:600;margin:0;padding:14px 24px;border-bottom:1px solid var(--rule)}
+.taccount .side{padding-bottom:12px}
+.taccount .side ul{list-style:none;margin:0;padding:0 24px}
+.taccount li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px dotted var(--rule);font-size:16px}
+.taccount li span:last-child{color:var(--muted);white-space:nowrap}
+.taccount .total{grid-column:1/-1;display:flex;justify-content:space-between;gap:16px;padding:14px 24px;border-top:2px solid var(--ink);border-bottom:4px double var(--ink);font-family:var(--serif);font-size:20px;background:var(--bg)}
+.taccount .total em{font-style:normal;color:var(--margin)}
+
+/* sections */
+section{padding:56px 0;border-top:1px solid var(--rule)}
+section>.wrap>h2{font-family:var(--serif);font-weight:400;font-size:clamp(28px,4vw,40px);line-height:1.15;margin:0 0 28px}
+.cols{display:grid;grid-template-columns:200px 1fr;gap:16px 40px}
+.cols .k{font-weight:600;color:var(--muted);font-size:15px}
+p{max-width:68ch;margin:0 0 16px}
+
+/* ledger rows for education */
+.ledger{width:100%;border-collapse:collapse}
+.ledger th,.ledger td{text-align:left;padding:14px 12px 14px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+.ledger th{font-size:14px;color:var(--muted);font-weight:600;border-bottom:2px solid var(--ink)}
+.ledger td.num{font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right;padding-right:0}
+.ledger th.num{text-align:right;padding-right:0}
+.ledger strong{font-family:var(--serif);font-size:19px;font-weight:600}
+.scroll{overflow-x:auto}
+
+/* projects */
+.entry{padding:20px 0;border-bottom:1px solid var(--rule)}
+.entry:first-of-type{padding-top:0}
+.entry h3{font-family:var(--serif);font-size:24px;font-weight:600;margin:0 0 6px}
+.entry .meta{color:var(--muted);font-size:15px;margin:0 0 10px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:12px 0 0;padding:0}
+.tags li{border:1px solid var(--rule);padding:3px 12px;font-size:14px;border-radius:999px}
+
+/* contact */
+.contact a.big{font-family:var(--serif);font-size:clamp(24px,4vw,36px);word-break:break-all}
+.contact dl{display:grid;grid-template-columns:140px 1fr;gap:10px 24px;margin:28px 0 0}
+.contact dt{color:var(--muted);font-weight:600;font-size:15px}
+.contact dd{margin:0}
+footer{border-top:1px solid var(--rule);padding:28px 0 40px;color:var(--muted);font-size:14px}
+
+/* one entrance: the ledger rows post in once */
+@keyframes post{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.taccount li{animation:post .5s ease both}
+.taccount li:nth-child(2){animation-delay:.08s}
+.taccount li:nth-child(3){animation-delay:.16s}
+.taccount li:nth-child(4){animation-delay:.24s}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .taccount li{animation:none}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .hero{padding:48px 0 40px}
+  .taccount{grid-template-columns:1fr}
+  .taccount::before{display:none}
+  .taccount .side+.side{border-top:2px solid var(--ink)}
+  .cols{grid-template-columns:1fr}
+  .contact dl{grid-template-columns:1fr;gap:2px}
+  .contact dd{margin-bottom:12px}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">P. Mahesh</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a class="link" href="#about">About</a></li>
+        <li><a class="link" href="#education">Education</a></li>
+        <li><a class="link" href="#project">Project</a></li>
+        <li><a class="link" href="#sap">SAP FICO</a></li>
+        <li><a class="link" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap">
+    <div class="hero">
+      <h1>Polemoni Mahesh</h1>
+      <p class="lead">MBA (Finance) student from Hyderabad, building a career in finance and accounting with SAP FICO.</p>
+
+      <div class="taccount" role="group" aria-label="Summary of what I have studied and what I am building">
+        <div class="side">
+          <h2>Studied</h2>
+          <ul>
+            <li><span>B.Com (Computer Applications)</span><span>2025</span></li>
+            <li><span>Intermediate</span><span>2022</span></li>
+            <li><span>SSC</span><span>2020</span></li>
+          </ul>
+        </div>
+        <div class="side">
+          <h2>Building</h2>
+          <ul>
+            <li><span>MBA, Finance specialization</span><span>2025–2027</span></li>
+            <li><span>SAP FICO skills</span><span>In progress</span></li>
+            <li><span>Working capital project</span><span>Completed</span></li>
+          </ul>
+        </div>
+        <div class="total"><span>Balance</span><em>Ready for a fresher role in finance</em></div>
+      </div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap">
+      <h2>About me</h2>
+      <p>I completed my B.Com in Computer Applications at BJR Degree College, Hyderabad, and I am now doing my MBA with a Finance specialization. My course mixes accounting with computer skills, so I like finance work that is done accurately and with good tools.</p>
+      <p>I am learning SAP FICO to prepare for fresher roles in finance and accounting. Outside study I enjoy outdoor sports, travelling to new places, music and movies.</p>
+      <div class="cols" style="margin-top:28px">
+        <div class="k">Languages</div><div>English, Telugu, Hindi</div>
+        <div class="k">Interests</div><div>Outdoor sports, travelling, listening to music, watching movies</div>
+        <div class="k">Based in</div><div>Hyderabad, Telangana</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <h2>Education</h2>
+      <div class="scroll">
+        <table class="ledger">
+          <thead>
+            <tr><th scope="col">Qualification</th><th scope="col">Institution</th><th scope="col">Year</th><th scope="col" class="num">Score</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>MBA, Finance</strong></td><td>Siddhartha Institute of Engineering College</td><td>2025–2027</td><td class="num">Pursuing</td></tr>
+            <tr><td><strong>B.Com (Computer Applications)</strong></td><td>BJR Degree College, Hyderabad</td><td>2025</td><td class="num">8.30 CGPA (83%)</td></tr>
+            <tr><td><strong>Intermediate</strong></td><td>Add your college name</td><td>2022</td><td class="num">75%</td></tr>
+            <tr><td><strong>SSC</strong></td><td>Add your school name</td><td>2020</td><td class="num">93%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="project">
+    <div class="wrap">
+      <h2>Project</h2>
+      <article class="entry">
+        <h3>Working capital study at Parle</h3>
+        <p class="meta">Final-year project, B.Com (Computer Applications)</p>
+        <p>I studied how Parle manages its working capital: cash, receivables, inventory and payables. Add two or three lines here on what you measured, which ratios you used and what you found.</p>
+        <ul class="tags">
+          <li>Working capital</li>
+          <li>Ratio analysis</li>
+          <li>Financial statements</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="sap">
+    <div class="wrap">
+      <h2>Learning SAP FICO</h2>
+      <p>SAP FICO covers Financial Accounting (FI) and Controlling (CO), the modules companies use for their books and cost tracking. I am practising in an SAP training client and preparing for fresher interviews.</p>
+      <div class="cols">
+        <div class="k">Financial Accounting (FI)</div><div>General ledger, accounts payable, accounts receivable, asset accounting</div>
+        <div class="k">Controlling (CO)</div><div>Cost centres, profit centres, internal orders</div>
+        <div class="k">Status</div><div>Training in progress. Update this line as you finish each topic.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <a class="big" href="mailto:your.email@example.com">your.email@example.com</a>
+      <dl>
+        <dt>Phone</dt><dd><a href="tel:+910000000000">+91 00000 00000</a></dd>
+        <dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/your-profile" rel="noopener">linkedin.com/in/your-profile</a></dd>
+        <dt>Resume</dt><dd><a href="resume.pdf">Download resume (PDF)</a></dd>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="yr">2026</span> Polemoni Mahesh. Hyderabad, India.</div>
+</footer>
+
+<script>
+document.getElementById("yr").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
